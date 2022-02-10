@@ -1,5 +1,8 @@
 name: Deployment to NPM
-on: [tags]
+on: 
+  push:
+    tags:
+      - "2.*"
 
 jobs:
   Deploy:
