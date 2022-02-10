@@ -1,0 +1,12 @@
+name: Deployment to NPM
+on: [tags]
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    environment: publish
+    steps: 
+      - name: Publish to NPM
+        run: |
+          npm build
+          npm publish
